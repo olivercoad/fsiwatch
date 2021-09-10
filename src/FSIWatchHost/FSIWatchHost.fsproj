@@ -10,5 +10,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\dotnet-watch\dotnet-watch.csproj" />
+    <ProjectReference Include="..\FSIWatchRunner\FSIWatchRunner.fsproj" />
   </ItemGroup>
 </Project>
