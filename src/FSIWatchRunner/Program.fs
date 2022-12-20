@@ -53,7 +53,7 @@ let preloadAndWaitForSignal (clientHandleClientIn:string) (clientHandleClientOut
     let nextAction = sr.ReadLine()
 
     let switchToMain () =
-        pipeClientOut.WaitForPipeDrain()
+        if System.OperatingSystem.IsWindows() then pipeClientOut.WaitForPipeDrain()
         System.Console.SetOut(savedConsoleOut)
         System.Console.SetError(savedConsoleErr)
         sw.Close()

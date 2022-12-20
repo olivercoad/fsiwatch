@@ -234,7 +234,7 @@ let startStandbyProcess
                     let sendMessage (msg: string) =
                         async {
                             do! Async.AwaitTask(sw.WriteLineAsync(msg))
-                            pipeServerOut.WaitForPipeDrain()
+                            if OperatingSystem.IsWindows() then pipeServerOut.WaitForPipeDrain()
                         }
 
                     for ReferenceLine reference in references do
