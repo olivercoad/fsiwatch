@@ -16,6 +16,8 @@ TODO: check env DOTNET_USE_POLLING_FILE_WATCHER to poll the filesystem
 
 # Fast modes
 
+⚠ This is a work in progress. Fast modes have not been fully implemented yet and do not work.
+
 The default behaviour when a change is detected is to kill the process (if not already exited) and run the script again in a new process.
 This is the most reliable option.
 
